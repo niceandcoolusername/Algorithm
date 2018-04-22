@@ -13,7 +13,7 @@ public:
 	Graph(int V);
 	void addEdge(int u,int v,int w);
 	void shortestpath();
-	
+
 };
 
 Graph::Graph(int V){
@@ -44,8 +44,7 @@ void Graph::shortestpath(){
 			int weight=(*i).second;
 
 			if(dist[v]>dist[u]+weight){
-				if(dist[v]!=INT_MAX)
-					pq.push(make_pair(dist[v],v));
+
 				dist[v]=dist[u]+weight;
 				pq.push(make_pair(dist[v],v));
 				parent[v]=u;
@@ -66,7 +65,7 @@ int main()
     // create the graph given in above fugure
     int V = 9;
     Graph g(V);
- 
+
     //  making above shown graph
     g.addEdge(0, 1, 4);
     g.addEdge(0, 7, 8);
@@ -82,8 +81,8 @@ int main()
     g.addEdge(6, 7, 1);
     g.addEdge(6, 8, 6);
     g.addEdge(7, 8, 7);
- 
+
     g.shortestpath();
- 
+
     return 0;
 }
