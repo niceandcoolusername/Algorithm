@@ -11,7 +11,7 @@ int maxp(int n){
 
 	for(int i=1;i<=n;i++){
 		int maxv=0;
-		for(int j=1;j<=i/2;j++){
+		for(int j=1;j<=i/2;j++){                  //Here i/2 is just to reduce computation cost,because difference wont matter if it goes to i or i/2,both yield same result
 			maxv=maxi(maxv,(i-j)*j,j*val[i-j]);
 	
 	}
